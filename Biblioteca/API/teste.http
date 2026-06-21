@@ -1,0 +1,67 @@
+
+###Livro
+### Cadastrar
+POST http://localhost:5244/api/livro/cadastrar
+Content-Type: application/json
+
+  {
+    "titulo": "Domain-Driven Design",
+    "autor": "Eric Evans",
+    "quantidade": 10
+  }
+
+### Listar
+GET http://localhost:5244/api/livro/listar
+
+### Deletar
+POST http://localhost:5244/api/livro/deletar/21e4c006-fef0-4724-86a4-74df2af2baa6
+
+### Leitor
+### Cadastrar
+POST http://localhost:5244/api/leitor/cadastrar
+Content-Type: application/json
+
+  {
+    "nome": "Ivan Raimundo Schoffen",
+    "email": "ivan@123",
+    "telefone": "41 995236195"
+  }
+
+### Listar
+GET http://localhost:5244/api/leitor/listar
+
+### Buscar por id
+GET http://localhost:5244/api/leitor/buscar/6c7c3777-6106-405a-b165-a1c5f2bb19d4
+
+### Deletar
+POST http://localhost:5244/api/leitor/deletar/6c7c3777-6106-405a-b165-a1c5f2bb19d4
+
+### ALterar
+POST http://localhost:5244/api/leitor/alterar
+Content-Type: application/json
+
+  {
+    "id": "6c7c3777-6106-405a-b165-a1c5f2bb19d4",
+    "nome": "Ivan Raimundo Schoffen",
+    "email": "ivan@456",
+    "telefone": "41 996431129"
+  }
+
+### Emprestimo
+### Emprestar
+POST http://localhost:5244/api/emprestimo/emprestar
+Content-Type: application/json
+
+  {
+    "LivroId": "7771d0c9-7baf-4212-a86b-f8591c0dccf9",
+    "LeitorId": "eaeefd40-7c28-4620-9430-5999871f2858"
+  }
+
+### Listar emprestimos
+GET http://localhost:5244/api/emprestimo/emprestados
+
+### Devolver emprestimo
+POST http://localhost:5244/api/emprestimo/devolver/4aed4cf1-fcaa-483b-8179-d82f1847ec90
+
+### Listar historico
+GET http://localhost:5244/api/historico/listar
