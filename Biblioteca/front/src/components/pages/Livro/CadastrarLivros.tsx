@@ -2,7 +2,7 @@ import { useState } from "react";
 import api from "../../../services/api";
 import Livro from "../../../models/Livro";
 
-function CadastrarLivro() {
+function CadastrarLivros() {
     const [titulo, setTitulo] = useState("");
     const [autor, setAutor] = useState("");
     const [quantidade, setQuantidade] = useState("");
@@ -72,4 +72,4 @@ function CadastrarLivro() {
     );
 }
 
-export default CadastrarLivro;
+export default CadastrarLivros;

@@ -47,7 +47,7 @@ app.MapGet("/api/livro/listar", ([FromServices] AppDbContext ctx) =>
     return Results.NotFound("Nenhum livro cadastrado");
 });
 
-app.MapGet("/api/produto/buscar/{id}",
+app.MapGet("/api/livro/buscar/{id}",
     ([FromRoute] string id,
     [FromServices] AppDbContext ctx) =>
 {

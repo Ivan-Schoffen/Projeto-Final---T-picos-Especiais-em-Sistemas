@@ -25,7 +25,7 @@ function ListarLivros() {
     return (
         <div className="ListarLivros">
             <h1>Listagem de Livros</h1>
-            
+
             {livros.length === 0 ? (
                 <p>Nenhum livro cadastrado.</p>
             ) : (
@@ -35,7 +35,7 @@ function ListarLivros() {
                             <th style={{ padding: "8px" }}>Título</th>
                             <th style={{ padding: "8px" }}>Autor</th>
                             <th style={{ padding: "8px" }}>Quantidade</th>
-                            <th style={{ padding: "8px" }}>Ações</th>
+                            <th style={{ padding: "8px" }}>Deletar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,8 +45,8 @@ function ListarLivros() {
                                 <td style={{ padding: "8px" }}>{livro.autor}</td>
                                 <td style={{ padding: "8px" }}>{livro.quantidade}</td>
                                 <td style={{ padding: "8px" }}>
-                                    <button onClick={() => navigate(`/alterar/${livro.id}`)}>
-                                        Editar
+                                    <button onClick={() => navigate(`/deletar/${livro.id}`)}>
+                                        Deletar
                                     </button>
                                 </td>
                             </tr>
